@@ -9,10 +9,10 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Capa_Vista_EstadosFinancieros;
-using Capa_Vista_CierreContable;
+//using Capa_Vista_EstadosFinancieros;
+//using Capa_Vista_CierreContable;
 using Capa_Vista_Presupuesto;
-using Capa_Vista_Polizas;
+//using Capa_Vista_Polizas;
 using System.IO;
 
 namespace Capa_Vista_Contabilidad   
@@ -30,8 +30,8 @@ namespace Capa_Vista_Contabilidad
             //Primera label
             lbl_usuario2.Text = idUsuario;
 
-            Capa_Vista_Polizas.frmPolizas formulario = new Capa_Vista_Polizas.frmPolizas();
-            formulario.SetParametro(idUsuario);
+            /*Capa_Vista_Polizas.frmPolizas formulario = new Capa_Vista_Polizas.frmPolizas();
+            formulario.SetParametro(idUsuario);*/
 
             //Segunda label
             DateTime fechaHoraActual = DateTime.Now;
@@ -418,7 +418,7 @@ namespace Capa_Vista_Contabilidad
 
         private void BtnCierreCuentas_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FormCierre>();
+           AbrirFormulario<FormCierre>();
            BtnCierreCuentas.BackColor = Color.FromArgb(255, 51, 51);
            ocultaSubMenu();
         }
@@ -432,14 +432,14 @@ namespace Capa_Vista_Contabilidad
 
         private void btnEstadosFin_Click_1(object sender, EventArgs e)
         {
-           AbrirFormulario<Capa_Vista_EstadosFinancieros.EstadosFinancieros>();
+           //AbrirFormulario<Capa_Vista_EstadosFinancieros.EstadosFinancieros>();
            btnEstadosFin.BackColor = Color.FromArgb(255, 51, 51);
            ocultaSubMenu();
         }
 
         private void btnPolizas_Click(object sender, EventArgs e)
         {
-           AbrirFormulario<Capa_Vista_Polizas.frmPolizas>();
+           //AbrirFormulario<Capa_Vista_Polizas.frmPolizas>();
            btnPolizas.BackColor = Color.FromArgb(255, 51, 51);
            ocultaSubMenu();
         }
